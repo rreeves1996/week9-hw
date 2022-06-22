@@ -11,7 +11,7 @@ const questions = [
     ['Usage information: ', 'usage'],
     ['Contributor guidelines: ', 'contribute'],
     ['Testing guidelines: ', 'testing'],
-    ['License: ', 'license', ["Free use", "MIT License", "Closed source", "N/A"]]
+    ['License: ', 'license', ["APM", "AUR license", "REUSE Compliance", "N/A"]]
 ];
 
 const promptUser = () => {
@@ -42,15 +42,10 @@ const promptUser = () => {
         name: questions[5][1],
     },
     {
-        type: 'input',
-        message: questions[6][0],
-        name: questions[6][1],
-    },
-    {
       type: 'list',
-      message: questions[7][1],
-      name: questions[7][1],
-      choices: questions[7][2],
+      message: questions[6][0],
+      name: questions[6][1],
+      choices: questions[6][2],
     },
   ])
   .then(response => {
